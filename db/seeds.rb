@@ -94,89 +94,89 @@ VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Slack"),
   description: "Payment for Slack || APRIL 20, 2022",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Slack"),
   description: "Payment for Slack ||  June 13, 2021",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Smartsheet"),
   description: "Payment for Smartsheet || APRIL 20, 2022",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Smartsheet"),
   description: "Payment for Smartsheet ||  Jan 1, 2021",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Stripe"),
   description: "Payment for Stripe || APRIL 20, 2022",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Stripe"),
   description: "Payment for Stripe ||  Jan 1, 2021",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "GitHub"),
   description: "Payment for GitHub || APRIL 20, 2022",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "GitHub"),
   description: "Payment for GitHub ||  Jan 1, 2021",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Heroku"),
   description: "Payment for Heroku || APRIL 20, 2022",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Heroku"),
   description: "Payment for Heroku ||  Jan 1, 2021",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Google"),
   description: "Payment for Google || APRIL 20, 2022",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Google"),
   description: "Payment for Google ||  Jan 1, 2021",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Amazon Web Services"),
   description: "Payment for AWS || APRIL 20, 2022",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
 VendorTransaction.find_or_create_by!(
   workspace_vendor: WorkspaceVendor.find_by(name: "Amazon Web Services"),
   description: "Payment for AWS ||  Jan 1, 2021",
   amount_in_cents: rand(1000..10000),
-  transaction_date: Time.now - rand(1..20).days.ago,
+  transaction_date: DateTime.now(rand(1..20).days.ago),
 )
