@@ -1,24 +1,19 @@
-<div class="max-w-xl mx-auto bg-white rounded-2xl p-6 my-4">
-  <object class="w-auto h-9 mx-auto mb-5" type="image/svg+xml" data="https://www.stackshine.com/images/full_logo.svg">Stackshine logo</object>
-  <div class="prose prose-indigo">
-    <p>For the homepage of the application, the application must display the following:</p>
-    <ul role="list">
-      <li>Name of the “<strong>Workspace</strong>”</li>
-      <li>Domain of the “<strong>Workspace</strong>”</li>
-      <li>A Link to the “<strong>Members</strong>” of the “<strong>Workspace</strong>”</li>
-      <li>A Link to the “<strong>Workspace</strong> <strong>Vendors</strong>” of the “<strong>Workspace</strong>”</li>
-    </ul>
-    <p>Upon clicking on the “<strong>Workspace Vendors</strong>” link, the application will redirect into a separate page and see a list of “<strong>Workspace Vendors</strong>’’ for that specific “<strong>Workspace</strong>”. The page must show a list of the names and descriptions of all the “Workspace Vendors”. Each of “<strong>Workspace Vendor’s</strong>” names will be a link that will redirect to a page that displays the “<strong>Workspace Vendor’s</strong>” “<strong>name</strong>”, “<strong>description</strong>”, and its “<strong>vendor transactions</strong>”.</p>
-    <p>Upon clicking on the “<strong>Members</strong>” link, the application will redirect into a separate page and see a list of “<strong>Members</strong>” for that specific “Workspace”. The page must show a list of the emails of all the “<strong>Members</strong>”. Each of “<strong>Member’s</strong>” names will be a link that will redirect to a page that displays the “<strong>Member’s</strong>” “<strong>first</strong>” and “<strong>last name</strong>”, “<strong>email</strong>”, and “<strong>created_at</strong>” date.</p>
-    <p><strong>Note: We prioritize correctness of the data shown rather than the “prettiness” of the application. We strongly encourage you to not focus on the visuals of the application (other than the bare minimum for legibility) but rather the correctness of the user flow and data shown.</strong></p>
-    <h3>Misc</h3>
-    <p>Before starting this assessment, please review the README in the file for instructions on how to set up your application. <strong>Note</strong>: please run rails db:setup to set up the local environment.</p>
-    <p>
-      Upon finishing this assessment, please wait until the agreed upon date in which there will be a code review session with the person mentioned in your email.
-      If you have any questions regarding this assessment, please feel free to reach out for clarification at: <strong>“<a href="mailto:ben.chen@stackshine.io">ben.chen@stackshine.io</a>”</strong>
-    </p>
-    <p>
-      Good Luck!
-    </p>
-  </div>
+<div class="row">
+    <div class="col-6">
+        <div class="row">
+            <div class="col border-end homeTitle">
+                <h1><%= @workspace.name %></h1>
+                <p><%= @workspace.domain %></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="row">
+            <div class="col homeLinks">
+                <h3><%= link_to "Members", workspace_members_path, class: "homeLink" %></h3>
+                <h3><%= link_to "Vendors", workspace_vendors_path, class: "homeLink" %></h3>
+            </div>
+        </div>
+    </div>
 </div>

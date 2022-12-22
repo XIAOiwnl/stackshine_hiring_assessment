@@ -1,0 +1,21 @@
+<h1>Create a New Member</h1>
+
+
+
+
+<%= form_for @workspaceMember, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </p>
+
+  <p>
+  <%= f.label :description %>
+  <%= f.text_area :title %>
+  </p>
+
+    <p>
+  <%= f.submit %>
+  </p>
+
+<% end %>

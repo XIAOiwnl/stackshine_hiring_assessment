@@ -1,0 +1,33 @@
+<div class="container main">
+  <div class="row">
+    <div class="col">
+      <h1>Members</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col membersTable">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Title</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @workspaceMembers.each do |workspaceMember| %>
+            <tr>
+              <td><%= link_to workspaceMember.name, workspace_member_path(workspaceMember.id) %></td>
+              <td><%= workspaceMember.title %></td>
+              <td><%= workspaceMember.email %></td>
+            </tr>
+          <% end %>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
