@@ -1,46 +1,51 @@
-<div class="container main">
+<div class="row main">
+  <div class="col-1"></div>
+  <div class="col-1 backButton">
+    <h3><%= link_to "←Back", workspace_vendors_path, class: "backButton" %></h3>
+  </div>
+  <div class="col-1"></div>
 
-
-    <div class="row">
-      <div class="col">
-        <h1><%= @workspaceVendor.name %></h1>
+  <div class="col-6">
+      <div class="row">
+        <div class="col">
+          <h1><%= @workspaceVendor.name %></h1>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col vendorTable">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Description</th>
-
-            </tr>
-          </thead>
-          <tbody>
+      <div class="row">
+        <div class="col vendorTable">
+          <table class="table">
+            <thead>
               <tr>
-                <td><%= @workspaceVendor.name %></td>
-                <td><%= @workspaceVendor.description %></td>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+
               </tr>
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+                <tr>
+                  <td><%= @workspaceVendor.name %></td>
+                  <td><%= @workspaceVendor.description %></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
 
-
-
-    <div class="row marginTop100">
-      <div class="col">
-        <h3>Transactions</h3>
+      <div class="row marginTop100">
+        <div class="col">
+          <h3>Transactions</h3>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <%= render "workspace_vendors/vendorTransactions" %>
+      <div class="row">
+        <div class="col">
+          <%= render "workspace_vendors/vendorTransactions" %>
+        </div>
       </div>
-    </div>
 
-  
+  </div>
+
+  <div class="col-3"></div>
 </div>
 

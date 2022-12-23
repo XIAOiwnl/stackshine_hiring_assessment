@@ -1,35 +1,45 @@
-<div class="container main">
-  <div class="row">
-    <div class="col">
-      <h1><%= @workspaceMember.name %></h1>
+<div class="row main">
+  <div class="col-1"></div>
+  <div class="col-1 backButton">
+    <h3><%= link_to "←Back", workspace_members_path, class: "backButton" %></h3>
+  </div>
+  <div class="col-1"></div>
+
+  <div class="col-6">
+    <div class="row">
+      <div class="col">
+        <h1><%= @workspaceMember.name %></h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col memberTable">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Title</th>
+              <th scope="col">Email</th>
+              <th scope="col">Start Date</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td><%= @workspaceMember.first_name %></td>
+                <td><%= @workspaceMember.last_name %></td>
+                <td><%= @workspaceMember.title %></td>
+                <td><%= @workspaceMember.email %></td>
+                <!-- convert to local time and get date only -->
+                <td><%= @workspaceMember.created_at.getlocal.to_date %></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col memberTable">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Title</th>
-            <th scope="col">Email</th>
-            <th scope="col">Start Date</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td><%= @workspaceMember.first_name %></td>
-              <td><%= @workspaceMember.last_name %></td>
-              <td><%= @workspaceMember.title %></td>
-              <td><%= @workspaceMember.email %></td>
-              <!-- convert to local time and get date only -->
-              <td><%= @workspaceMember.created_at.getlocal.to_date %></td>
-            </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <div class="col-3"></div>
 </div>
 
 

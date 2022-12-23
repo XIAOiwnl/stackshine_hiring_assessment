@@ -11,10 +11,15 @@ body, th, td{
     text-align: center;
 }
 
-.homeLink {
+.homeLink, .backButton {
    color:white;
    text-decoration: none; 
    background-color: none;
+}
+
+.backButton {
+    text-align: center;
+    margin-top: 5px;
 }
 
 .main {
