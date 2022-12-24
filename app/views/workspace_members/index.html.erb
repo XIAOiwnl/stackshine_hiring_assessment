@@ -25,7 +25,7 @@
           <tbody>
             <% @workspaceMembers.each do |workspaceMember| %>
               <tr>
-                <td><%= link_to workspaceMember.name, workspace_member_path(workspaceMember.id) %></td>
+                <td><%= link_to workspaceMember.name, workspace_member_path(workspaceMember.id), class: "nameLink" %></td>
                 <td><%= workspaceMember.title %></td>
                 <td><%= workspaceMember.email %></td>
               </tr>

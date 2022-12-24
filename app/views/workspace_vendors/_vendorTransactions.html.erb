@@ -2,7 +2,7 @@
   <thead>
     <tr>
       <th scope="col">Description</th>
-      <th scope="col">Amount(¢)</th>
+      <th scope="col">Amount($)</th>
       <th scope="col">Date</th>
     </tr>
   </thead>
@@ -10,7 +10,8 @@
     <% @vendorTransactions.each do |vendorTransaction| %>
       <tr>
         <td><%= vendorTransaction.description %></td>
-        <td><%= vendorTransaction.amount_in_cents %></td>
+        <!-- conver cents to dollars -->
+        <td><%= (vendorTransaction.amount_in_cents / 100).to_s + "." + format('%02d', (vendorTransaction.amount_in_cents % 100).to_s) %></td>
         <!-- convert to local time and get date only -->
         <td><%= vendorTransaction.transaction_date.getlocal.to_date %></td>
       </tr>
