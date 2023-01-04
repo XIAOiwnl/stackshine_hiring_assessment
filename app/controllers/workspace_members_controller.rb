@@ -3,7 +3,7 @@ class WorkspaceMembersController < ApplicationController
         @workspaceMembers = WorkspaceMember.all
 
         #sort names using first_name alphabetically
-        @workspaceMembers = @workspaceMembers.sort_by {|workspaceMember| workspaceMember.first_name}
+        @workspaceMembers = @workspaceMembers.sort_by {|workspaceMember| [workspaceMember.first_name, workspaceMember.created_at]}
     end 
 
     def show
@@ -11,13 +11,14 @@ class WorkspaceMembersController < ApplicationController
     end
 
 
-    #create CRUD functions below:
+    #create, edit, destroy functions below:
     def new
         @workspaceMember = WorkspaceMember.new
     end
 
     def create
         @workspaceMember = WorkspaceMember.new(member_params)
+        @workspaceMember.workspace_id = 1
         if @workspaceMember.save
             redirect_to workspace_members_path
         else

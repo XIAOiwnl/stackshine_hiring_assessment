@@ -1,6 +1,6 @@
 class WorkspaceVendorsController < ApplicationController
     def index
-        @workspaceVendors = WorkspaceVendor.all
+        @workspaceVendors = WorkspaceVendor.where(workspace_id: "1")
 
         #sort names alphabetically
         @workspaceVendors = @workspaceVendors.sort_by {|workspaceVendor| workspaceVendor.name}

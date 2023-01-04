@@ -1,8 +1,5 @@
 <h1>Create a New Member</h1>
 
-
-
-
 <%= form_for @workspaceMember, url: workspace_members_path do |f| %> 
   <p>
   <%= f.label :first_name %>
@@ -27,8 +24,6 @@
   <br>
   <%= f.text_field :title %>
   </p>
-
-
 
   <p>
   <%= f.submit %>
